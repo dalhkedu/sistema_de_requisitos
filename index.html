@@ -12,256 +12,68 @@
     <title>Requisitos</title>
 </head>
 
-<body id="Body" class="pageweb">
-
-    <!-- Niveis de usuário -->
-    <div id="User" class="container-fluid bg-white vh-100 py-5 border-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <label for="button-addon2" class="form-label">Niveis de Usuário</label>
-                    <div class="input-group mb-4">
-                        <input type="text" class="form-control" placeholder="Digite um usuário para o software"
-                            aria-label="Digite um usuário para o software" aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">ADD</button>
-                    </div> <!-- .input-group -->
-                    <div class="table-responsive">
-                        <table class="table table-striped align-middle">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th scope="row">#</th>
-                                    <td colspan="2"><strong>Usuário</strong></td>
-                                    <td class="text-center"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td colspan="2">Gerente</td>
-                                    <td class="text-center">
-                                        <a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td colspan="2">Cliente</td>
-                                    <td class="text-center">
-                                        <a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> <!-- .table-->
-                    </div> <!-- .table-responsive -->
-                </div> <!-- .col -->
-            </div> <!-- .row -->
-        </div> <!-- .container -->
-    </div> <!-- #User -->
-
-    <!-- Contrato -->
-    <div id="Swagger" class="container-fluid bg-white vh-100 py-5 border-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <label for="basic-url" class="form-label">Endpoints</label>
-                    <div class="input-group mb-4">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon3">http://localhost:</span>
+<body id="Body" class="pageweb">   
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               
+                <form class="row g-3" id="createProject">
+                    <div class="mb-3">
+                        <label for="exampleInputNameProject" class="form-label">Nome do Projeto</label>
+                        <input type="text" class="form-control" id="exampleInputNameProject" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exampleInputProjectDo" class="form-label">Descrição do projeto - Faz/Fazer</label>
+                        <input type="text" class="form-control" id="exampleInputProjectDo" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="exampleInputProjectFor" class="form-label">Descrição do projeto - Para</label>
+                        <input type="text" class="form-control" id="exampleInputProjectFor" />
+                    </div>
+                    <div class="description" id="descriptionProject"><!-- e montado com a soma de exampleInputProjectDo com exampleInputProjectFor --></div>
+                    <div class="mb-3">
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="formCheckTechJava" required>
+                            <label class="form-check-label" for="formCheckTechJava">Java</label>
                         </div>
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">ADD</button>
-                    </div> <!-- .input-group -->
-                    <div class="table-responsive">
-                        <table class="table table-striped align-middle">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th scope="row">#</th>
-                                    <td colspan="2"><strong>Endpoints</strong></td>
-                                    <td class="text-center"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td colspan="2">http://localhost:8080/api-name/version/customer/create</td>
-                                    <td class="text-center">
-                                        <a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td colspan="2">http://localhost:8080/api-name/version/customer</td>
-                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> <!-- .table-->
-                    </div> <!-- .table-responsive -->
-                </div> <!-- .col -->
-            </div> <!-- .row -->
-        </div> <!-- .container -->
-    </div> <!-- #Swagger -->
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="formCheckTechSpring" required>
+                            <label class="form-check-label" for="formCheckTechSpring">Spring FrameWork</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="formCheckTechPlsql" required>
+                            <label class="form-check-label" for="formCheckTechPlsql">Plsql</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="formCheckTechKafka" required>
+                            <label class="form-check-label" for="formCheckTechKafka">Kafka</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Selecione o Tipo de Projeto</option>
+                            <option value="api">API</option>
+                            <option value="batch">BATCH</option>
+                            <option value="spa">SPA</option>
+                            <option value="website">WEBSITE</option>
+                            <option value="pagina-estatica">PÁGINA ESTÁTICA (html/css/js)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
 
-    <!-- Funcionais -->
-    <div id="Functional" class="container-fluid bg-white vh-100 py-5 border-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <label class="form-label">Palavras chaves funcionais</label>
-                    <div class="input-group mb-2">
-                        <select class="form-select" id="inputGroupSelect04"
-                            aria-label="Example select with button addon">
-                            <option selected>Selecione um endpoint</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select> <!-- .form-select -->
-                    </div> <!-- input-group -->
-                    <div class="input-group mb-4">
-                        <span class="input-group-text">Ação - Resposta</span>
-                        <input type="text" aria-label="First name" placeholder="Cadastrar Cliente" class="form-control">
-                        <input type="text" aria-label="Last name" placeholder="Resposta de Cadastro"
-                            class="form-control">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">ADD</button>
-                    </div> <!-- .input-group -->
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+    </div> <!-- .container -->
 
-                    <div class="table-responsive">
-                        <table class="table table-striped align-middle">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th scope="row">Endpoint</th>
-                                    <td colspan="col"><strong>Ação</strong></td>
-                                    <td colspan="col"><strong>Resposta</strong></td>
-                                    <td class="text-center"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">/account</th>
-                                    <td>Consultar Saldo</td>
-                                    <td>Saldo consultado</td>
-                                    <td class="text-center">
-                                        <a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">/debit</th>
-                                    <td>Debitar Saldo</td>
-                                    <td>Saldo atual e saldo debitado</td>
-                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> <!-- .table-->
-                    </div> <!-- .table-responsive -->
-                </div> <!-- .col -->
-            </div> <!-- .row -->
-        </div> <!-- .container -->
-    </div> <!-- #Functional -->
-
-    <!-- Restrições -->
-    <div id="Restrictions" class="container-fluid bg-white vh-100 py-5 border-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <label class="form-label">Restrições</label>
-                    <div class="input-group mb-4">
-                        <div class="row mb-3">
-                            <div class="col">
-                                <select class="form-select" id="inputGroupSelect04"
-                                    aria-label="Example select with button addon">
-                                    <option selected>Selecione um Nivel de acesso</option>
-                                    <option value="1">Cliente</option>
-                                    <option value="2">Gerente</option>
-                                </select> <!-- .form-select -->
-                            </div> <!-- .col -->
-                            <div class="col">
-                                <select class="form-select" id="inputGroupSelect04"
-                                    aria-label="Example select with button addon">
-                                    <option selected>Seleciona uma regra</option>
-                                    <option value="1">Solicita</option>
-                                    <option value="2">Acessa</option>
-                                    <option value="3">Não Acessa</option>
-                                </select> <!-- .form-select -->
-                            </div> <!-- .col -->
-                            <div class="col">
-                                <select class="form-select" id="inputGroupSelect04"
-                                    aria-label="Example select with button addon">
-                                    <option selected>Selecione um funcionamento</option>
-                                    <option value="1">/account - Consultar Saldo - Saldo consultado</option>
-                                    <option value="2">/debit - Debitar Saldo - Saldo atual e saldo debitado</option>
-                                </select> <!-- .form-select -->
-                            </div> <!-- .col -->
-                            <div class="col-1">
-                                <button class="btn btn-outline-secondary" type="button">Button</button>
-                            </div> <!-- .col -->
-                        </div> <!-- .row -->
-                    </div> <!-- input-group -->
-                    <div class="table-responsive">
-                        <table class="table table-striped align-middle">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th scope="row">Nivel</th>
-                                    <td colspan="col"><strong>Regra</strong></td>
-                                    <td colspan="col"><strong>Funcionamento</strong></td>
-                                    <td class="text-center"></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Cliente</th>
-                                    <td>Acessa</td>
-                                    <td>/account - Consultar Saldo - Saldo consultado</td>
-                                    <td class="text-center">
-                                        <a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Cliente</th>
-                                    <td>Solicita</td>
-                                    <td>/debit - Debitar Saldo - Saldo atual e saldo debitado</td>
-                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Gerente</th>
-                                    <td>Aprova</td>
-                                    <td>/credit - Aumentar Limite Cartão de Credito - Limite atual do cartão de credito
-                                    </td>
-                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
-                                            <strong>X</strong>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> <!-- .table-->
-                    </div> <!-- .table-responsive -->
-                </div> <!-- .col -->
-            </div> <!-- .row -->
-        </div> <!-- .container -->
-    </div> <!-- #Restrictions -->
-
-    <div class="fixed-bottom">...</div>
 
     <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/models/User.js"></script>
+    <script src="./assets/js/controllers/UserController.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

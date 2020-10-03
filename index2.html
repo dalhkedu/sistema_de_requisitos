@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <title>Requisitos</title>
+</head>
+
+<body id="Body" class="pageweb">
+
+    <!-- Niveis de usuário -->
+    <div id="User" class="container-fluid bg-white vh-100 py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label for="addUser" class="form-label">Niveis de Usuário</label>
+                    <div class="input-group mb-4">
+                        <input type="text" class="form-create" id="inputUser" class="form-control" placeholder="Digite um usuário para o software"
+                            aria-label="Digite um usuário para o software" aria-describedby="addUser">
+                        <button class="btn btn-outline-secondary" type="button" id="addUser">ADD</button>
+                    </div> <!-- .input-group -->
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle" id="tableUser">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="row">#</th>
+                                    <td colspan="2"><strong>Usuário</strong></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyUser"><!-- Preenchimento via js --></tbody>
+                        </table> <!-- .table-->
+                    </div> <!-- .table-responsive -->
+                </div> <!-- .col -->
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- #User -->
+
+    <!-- Contrato -->
+    <div id="Swagger" class="container-fluid bg-white vh-100 py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label for="basic-url" class="form-label">Endpoints</label>
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">http://localhost:</span>
+                        </div>
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">ADD</button>
+                    </div> <!-- .input-group -->
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="row">#</th>
+                                    <td colspan="2"><strong>Endpoints</strong></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td colspan="2">http://localhost:8080/api-name/version/customer/create</td>
+                                    <td class="text-center">
+                                        <a class="text-danger text-decoration-none" href="#">
+                                            <strong>X</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td colspan="2">http://localhost:8080/api-name/version/customer</td>
+                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
+                                            <strong>X</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> <!-- .table-->
+                    </div> <!-- .table-responsive -->
+                </div> <!-- .col -->
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- #Swagger -->
+
+    <!-- Funcionais -->
+    <div id="Functional" class="container-fluid bg-white vh-100 py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">Palavras chaves funcionais</label>
+                    <div class="input-group mb-2">
+                        <select class="form-select" id="inputGroupSelect04"
+                            aria-label="Example select with button addon">
+                            <option selected>Selecione um endpoint</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select> <!-- .form-select -->
+                    </div> <!-- input-group -->
+                    <div class="input-group mb-4">
+                        <span class="input-group-text">Ação - Resposta</span>
+                        <input type="text" aria-label="First name" placeholder="Cadastrar Cliente" class="form-control">
+                        <input type="text" aria-label="Last name" placeholder="Resposta de Cadastro"
+                            class="form-control">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">ADD</button>
+                    </div> <!-- .input-group -->
+
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="row">Endpoint</th>
+                                    <td colspan="col"><strong>Ação</strong></td>
+                                    <td colspan="col"><strong>Resposta</strong></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">/account</th>
+                                    <td>Consultar Saldo</td>
+                                    <td>Saldo consultado</td>
+                                    <td class="text-center">
+                                        <a class="text-danger text-decoration-none" href="#">
+                                            <strong>X</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">/debit</th>
+                                    <td>Debitar Saldo</td>
+                                    <td>Saldo atual e saldo debitado</td>
+                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
+                                            <strong>X</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> <!-- .table-->
+                    </div> <!-- .table-responsive -->
+                </div> <!-- .col -->
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- #Functional -->
+
+    <!-- Restrições -->
+    <div id="Restrictions" class="container-fluid bg-white vh-100 py-5 border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">Restrições</label>
+                    <div class="input-group mb-4">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <select class="form-select" id="inputGroupSelect04"
+                                    aria-label="Example select with button addon">
+                                    <option selected>Selecione um Nivel de acesso</option>
+                                    <option value="1">Cliente</option>
+                                    <option value="2">Gerente</option>
+                                </select> <!-- .form-select -->
+                            </div> <!-- .col -->
+                            <div class="col">
+                                <select class="form-select" id="inputGroupSelect04"
+                                    aria-label="Example select with button addon">
+                                    <option selected>Seleciona uma regra</option>
+                                    <option value="1">Solicita</option>
+                                    <option value="2">Acessa</option>
+                                    <option value="3">Não Acessa</option>
+                                </select> <!-- .form-select -->
+                            </div> <!-- .col -->
+                            <div class="col">
+                                <select class="form-select" id="inputGroupSelect04"
+                                    aria-label="Example select with button addon">
+                                    <option selected>Selecione um funcionamento</option>
+                                    <option value="1">/account - Consultar Saldo - Saldo consultado</option>
+                                    <option value="2">/debit - Debitar Saldo - Saldo atual e saldo debitado</option>
+                                </select> <!-- .form-select -->
+                            </div> <!-- .col -->
+                            <div class="col-1">
+                                <button class="btn btn-outline-secondary" type="button">Button</button>
+                            </div> <!-- .col -->
+                        </div> <!-- .row -->
+                    </div> <!-- input-group -->
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="row">Nivel</th>
+                                    <td colspan="col"><strong>Regra</strong></td>
+                                    <td colspan="col"><strong>Funcionamento</strong></td>
+                                    <td class="text-center"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Cliente</th>
+                                    <td>Acessa</td>
+                                    <td>/account - Consultar Saldo - Saldo consultado</td>
+                                    <td class="text-center">
+                                        <a class="text-danger text-decoration-none" href="#">
+                                            <strong>X</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Cliente</th>
+                                    <td>Solicita</td>
+                                    <td>/debit - Debitar Saldo - Saldo atual e saldo debitado</td>
+                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
+                                            <strong>X</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Gerente</th>
+                                    <td>Aprova</td>
+                                    <td>/credit - Aumentar Limite Cartão de Credito - Limite atual do cartão de credito
+                                    </td>
+                                    <td class="text-center"><a class="text-danger text-decoration-none" href="#">
+                                            <strong>X</strong>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> <!-- .table-->
+                    </div> <!-- .table-responsive -->
+                </div> <!-- .col -->
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- #Restrictions -->
+
+    <div class="fixed-bottom">...</div>
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/models/User.js"></script>
+    <script src="./assets/js/controllers/UserController.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
